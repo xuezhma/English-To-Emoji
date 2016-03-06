@@ -1,0 +1,24 @@
+{
+  "name": "english-to-emoji",
+  "version": "1.0.0",
+  "description": "Less word = More fun! Kappa",
+  "main": "translator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuezhma/EnglishToEmoji.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuezhma/EnglishToEmoji/issues"
+  },
+  "homepage": "https://github.com/xuezhma/EnglishToEmoji#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}

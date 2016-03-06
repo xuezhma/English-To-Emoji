@@ -1,4 +1,28 @@
-{
+'use strict'
+const translate = (sentence) => {
+	const newSentence = sentence.split(' ').map(word => {
+		// check meme first 
+		if (lib.keys.meme.indexOf(word) > -1){
+			return `<img src='${lib.meme[word].url}'>`
+		} else{
+			// to do
+			return word
+		}
+	})
+
+	return newSentence.join(' ')
+}
+
+const listMemes = () => {
+	let memelist = []
+	for (let i = 0; i < lib.keys.meme.length; i++) {
+		let meme = lib.keys.meme[i]
+		memelist.push(`${meme}: <img src='${lib.meme[meme].url}'><br />`)
+	}
+	return memelist.join(' ')
+}
+
+const lib = {
 	"meme" : {
 		"awkwardSeal" : {
 			"url" : "https://raw.githubusercontent.com/xuezhma/English-To-Emoji/master/lib/awkwardSeal.png"
@@ -99,4 +123,10 @@
 		"object" : ["me", "him", "her", "you", "them", "mi", "yo"],
 		"emotion" : ["rekt", "omg", "fuck"]
 	}
+}
+
+module.exports = {
+	lib: lib,
+	translate: translate,
+	listMemes: listMemes
 }
